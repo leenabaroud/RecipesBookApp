@@ -1,0 +1,10 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.RecipesBookApp" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/orange_primary</item>
+
+        <item name="colorPrimaryDark">@color/orange_primary_dark</item>
+        <item name="statusBarBackground">@color/orange_primary_dark</item>
+
+        <item name="colorSecondary">@color/orange_light</item>
+    </style>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RecipesBookApp</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="recipe_categories">
+        <item>Main Dishes</item>
+        <item>Desserts</item>
+        <item>Appetizers</item>
+        <item>Drinks</item>
+        <item>Salads</item>
+    </string-array>
+</resources>

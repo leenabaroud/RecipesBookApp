@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FAFAFA"
+    tools:context=".HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/welcomeHeaderLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="24dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Discover Recipes"
+            android:textColor="@color/orange_dark"
+            android:textSize="22sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/searchCardView"
+        android:layout_width="0dp"
+        android:layout_height="54dp"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="27dp"
+        app:cardElevation="3dp"
+        app:strokeWidth="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/welcomeHeaderLayout">
+
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:iconifiedByDefault="false"
+            app:searchIcon="@android:drawable/ic_menu_search"
+            app:queryBackground="@android:color/transparent"
+            app:submitBackground="@android:color/transparent"
+            app:queryHint="Search delicious recipes..." />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/categoryTabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="@android:color/transparent"
+        android:contentDescription="Recipe Categories"
+        app:tabMode="scrollable"
+        app:tabGravity="fill"
+        app:tabMinWidth="70dp"
+        app:tabPaddingStart="16dp"
+        app:tabPaddingEnd="16dp"
+        app:tabRippleColor="@color/orange_light"
+        app:tabSelectedTextColor="@color/orange_dark"
+        app:tabTextColor="#8E8E93"
+        app:tabIndicatorColor="@color/orange_primary"
+        app:tabIndicatorHeight="3dp"
+        app:tabIndicatorFullWidth="false"
+        app:tabTextAppearance="@android:style/TextAppearance.Widget.TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/searchCardView" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recipesRecyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:paddingHorizontal="12dp"
+        android:clipToPadding="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/categoryTabLayout"
+      />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
